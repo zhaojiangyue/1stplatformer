@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c3vm87yoj7ly1"]
+[gd_scene load_steps=16 format=3 uid="uid://c3vm87yoj7ly1"]
 
 [ext_resource type="PackedScene" uid="uid://c47i431pd7slm" path="res://scenes/platform.tscn" id="1_gi18u"]
 [ext_resource type="PackedScene" uid="uid://bece0e3lo7xg2" path="res://scenes/player.tscn" id="1_s10t7"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://d0ko0newwlg21" path="res://scenes/killzone.tscn" id="5_js0nj"]
 [ext_resource type="PackedScene" uid="uid://csa402nbuy376" path="res://scenes/slime.tscn" id="6_ooqg2"]
 [ext_resource type="FontFile" uid="uid://d17rrurifolln" path="res://assets/fonts/PixelOperator8.ttf" id="7_emur6"]
+[ext_resource type="Script" path="res://game_manager.gd" id="8_rhynl"]
+[ext_resource type="FontFile" uid="uid://htugfphdqllm" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_qnhye"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_axry7"]
 texture = ExtResource("2_4tais")
@@ -448,6 +450,23 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_rhynl")
+
+[node name="ScoreLabel" type="Label" parent="GameManager"]
+offset_left = 362.0
+offset_top = 26.0
+offset_right = 472.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_qnhye")
+theme_override_font_sizes/font_size = 8
+text = "Great Job!
+You collected X coins"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(51, 55)
 tile_set = SubResource("TileSet_hb2vw")
@@ -484,6 +503,12 @@ position = Vector2(255, 1)
 [node name="Coin3" parent="Coins" instance=ExtResource("4_qn7a2")]
 position = Vector2(270, 1)
 
+[node name="Coin4" parent="Coins" instance=ExtResource("4_qn7a2")]
+position = Vector2(381, 64)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("4_qn7a2")]
+position = Vector2(395, 64)
+
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Platform" parent="Platforms" instance=ExtResource("1_gi18u")]
@@ -514,10 +539,10 @@ theme_override_font_sizes/font_size = 8
 text = "Space to Jump"
 
 [node name="Label2" type="Label" parent="Labels"]
-offset_left = 408.0
-offset_top = 81.0
-offset_right = 518.0
-offset_bottom = 104.0
+offset_left = 406.0
+offset_top = 94.0
+offset_right = 516.0
+offset_bottom = 117.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_emur6")
 theme_override_font_sizes/font_size = 8
