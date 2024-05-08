@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3vm87yoj7ly1"]
+[gd_scene load_steps=14 format=3 uid="uid://c3vm87yoj7ly1"]
 
 [ext_resource type="PackedScene" uid="uid://c47i431pd7slm" path="res://scenes/platform.tscn" id="1_gi18u"]
 [ext_resource type="PackedScene" uid="uid://bece0e3lo7xg2" path="res://scenes/player.tscn" id="1_s10t7"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cu4d3mf8kswp6" path="res://scenes/coin.tscn" id="4_qn7a2"]
 [ext_resource type="PackedScene" uid="uid://d0ko0newwlg21" path="res://scenes/killzone.tscn" id="5_js0nj"]
 [ext_resource type="PackedScene" uid="uid://csa402nbuy376" path="res://scenes/slime.tscn" id="6_ooqg2"]
+[ext_resource type="FontFile" uid="uid://d17rrurifolln" path="res://assets/fonts/PixelOperator8.ttf" id="7_emur6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_axry7"]
 texture = ExtResource("2_4tais")
@@ -407,6 +408,21 @@ sources/0 = SubResource("TileSetAtlasSource_axry7")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_m837o"]
 
+[sub_resource type="Animation" id="Animation_x2aya"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(370, 20)]
+}
+
 [sub_resource type="Animation" id="Animation_ufxck"]
 resource_name = "move"
 length = 1.5
@@ -422,21 +438,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(370, 20), Vector2(464, 20)]
-}
-
-[sub_resource type="Animation" id="Animation_x2aya"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(370, 20)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yiwmx"]
@@ -499,3 +500,35 @@ autoplay = "move"
 
 [node name="Slime" parent="." instance=ExtResource("6_ooqg2")]
 position = Vector2(158, 12)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -58.0
+offset_top = 73.0
+offset_right = 52.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_emur6")
+theme_override_font_sizes/font_size = 8
+text = "Space to Jump"
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 408.0
+offset_top = 81.0
+offset_right = 518.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_emur6")
+theme_override_font_sizes/font_size = 8
+text = "Falling  hurts..."
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 235.0
+offset_top = -36.0
+offset_right = 345.0
+offset_bottom = -13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_emur6")
+theme_override_font_sizes/font_size = 8
+text = "Almost there..."
