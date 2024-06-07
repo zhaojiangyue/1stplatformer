@@ -1,50 +1,69 @@
-[gd_scene load_steps=16 format=3 uid="uid://c3vm87yoj7ly1"]
+[gd_scene load_steps=22 format=3 uid="uid://c3vm87yoj7ly1"]
 
 [ext_resource type="PackedScene" uid="uid://c47i431pd7slm" path="res://scenes/platform.tscn" id="1_gi18u"]
 [ext_resource type="PackedScene" uid="uid://bece0e3lo7xg2" path="res://scenes/player.tscn" id="1_s10t7"]
 [ext_resource type="Texture2D" uid="uid://bq38vqega2sd0" path="res://assets/sprites/world_tileset.png" id="2_4tais"]
 [ext_resource type="PackedScene" uid="uid://cu4d3mf8kswp6" path="res://scenes/coin.tscn" id="4_qn7a2"]
 [ext_resource type="PackedScene" uid="uid://d0ko0newwlg21" path="res://scenes/killzone.tscn" id="5_js0nj"]
+[ext_resource type="Texture2D" uid="uid://d0jt7mrch5fad" path="res://scripts/Circle2.png" id="5_n7uq8"]
 [ext_resource type="PackedScene" uid="uid://csa402nbuy376" path="res://scenes/slime.tscn" id="6_ooqg2"]
 [ext_resource type="FontFile" uid="uid://d17rrurifolln" path="res://assets/fonts/PixelOperator8.ttf" id="7_emur6"]
 [ext_resource type="Script" path="res://game_manager.gd" id="8_rhynl"]
 [ext_resource type="FontFile" uid="uid://htugfphdqllm" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_qnhye"]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bkqjv"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hbmv3"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ioyts"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_axry7"]
 texture = ExtResource("2_4tais")
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_bkqjv")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
+3:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:0/0 = 0
+4:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:0/0 = 0
+5:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:0/0/physics_layer_0/angular_velocity = 0.0
 5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:0/0 = 0
+6:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:0/0/physics_layer_0/angular_velocity = 0.0
 6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:0/0 = 0
+7:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 7:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:0/0/physics_layer_0/angular_velocity = 0.0
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:0/0 = 0
+8:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 8:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:0/0/physics_layer_0/angular_velocity = 0.0
 8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -61,37 +80,46 @@ texture = ExtResource("2_4tais")
 11:0/0/physics_layer_0/angular_velocity = 0.0
 11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.5, 8, -8, 8, -1.75, -8, 0)
 0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
+3:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:1/0/physics_layer_0/angular_velocity = 0.0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
+4:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:1/0/physics_layer_0/angular_velocity = 0.0
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:1/0 = 0
+5:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:1/0/physics_layer_0/angular_velocity = 0.0
 5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:1/0 = 0
+6:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:1/0/physics_layer_0/angular_velocity = 0.0
 7:1/0 = 0
+7:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 7:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:1/0/physics_layer_0/angular_velocity = 0.0
 7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:1/0 = 0
+8:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 8:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:1/0/physics_layer_0/angular_velocity = 0.0
 8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -108,30 +136,37 @@ texture = ExtResource("2_4tais")
 11:1/0/physics_layer_0/angular_velocity = 0.0
 11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.5, 8, -8, 8, -1.75, -8, 0)
 0:2/0 = 0
+0:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:2/0/physics_layer_0/angular_velocity = 0.0
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
+1:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:2/0/physics_layer_0/angular_velocity = 0.0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
+2:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
+3:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:2/0/physics_layer_0/angular_velocity = 0.0
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:2/0 = 0
+4:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:2/0/physics_layer_0/angular_velocity = 0.0
 4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:2/0 = 0
+5:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:2/0/physics_layer_0/angular_velocity = 0.0
 5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:2/0 = 0
+6:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:2/0/physics_layer_0/angular_velocity = 0.0
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -140,6 +175,7 @@ texture = ExtResource("2_4tais")
 7:2/0/physics_layer_0/angular_velocity = 0.0
 7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:2/0 = 0
+8:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 8:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:2/0/physics_layer_0/angular_velocity = 0.0
 8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -156,6 +192,7 @@ texture = ExtResource("2_4tais")
 11:2/0/physics_layer_0/angular_velocity = 0.0
 11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.5, 8, -8, 8, -1.75, -8, 0)
 0:3/0 = 0
+0:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:3/0/physics_layer_0/angular_velocity = 0.0
 1:3/0 = 0
@@ -166,6 +203,7 @@ texture = ExtResource("2_4tais")
 2:3/0/physics_layer_0/angular_velocity = 0.0
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:3/0 = 0
+5:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ioyts")
 5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:3/0/physics_layer_0/angular_velocity = 0.0
 6:3/0 = 0
@@ -181,12 +219,14 @@ texture = ExtResource("2_4tais")
 9:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:3/0/physics_layer_0/angular_velocity = 0.0
 0:4/0 = 0
+0:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:4/0/physics_layer_0/angular_velocity = 0.0
 1:4/0 = 0
 1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:4/0/physics_layer_0/angular_velocity = 0.0
 5:4/0 = 0
+5:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ioyts")
 5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:4/0/physics_layer_0/angular_velocity = 0.0
 6:4/0 = 0
@@ -202,12 +242,14 @@ texture = ExtResource("2_4tais")
 9:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:4/0/physics_layer_0/angular_velocity = 0.0
 0:5/0 = 0
+0:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbmv3")
 0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:5/0/physics_layer_0/angular_velocity = 0.0
 1:5/0 = 0
 1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:5/0/physics_layer_0/angular_velocity = 0.0
 5:5/0 = 0
+5:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ioyts")
 5:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:5/0/physics_layer_0/angular_velocity = 0.0
 6:5/0 = 0
@@ -280,111 +322,147 @@ texture = ExtResource("2_4tais")
 8:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:8/0/physics_layer_0/angular_velocity = 0.0
 0:9/0 = 0
+0:9/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 0:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:9/0/physics_layer_0/angular_velocity = 0.0
 1:9/0 = 0
+1:9/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 1:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:9/0/physics_layer_0/angular_velocity = 0.0
 2:9/0 = 0
+2:9/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 2:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:9/0/physics_layer_0/angular_velocity = 0.0
 3:9/0 = 0
+3:9/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 3:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:9/0/physics_layer_0/angular_velocity = 0.0
 4:9/0 = 0
+4:9/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 4:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:9/0/physics_layer_0/angular_velocity = 0.0
 5:9/0 = 0
+5:9/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 5:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:9/0/physics_layer_0/angular_velocity = 0.0
 6:9/0 = 0
+6:9/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 6:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:9/0/physics_layer_0/angular_velocity = 0.0
 7:9/0 = 0
+7:9/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 7:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:9/0/physics_layer_0/angular_velocity = 0.0
 0:10/0 = 0
+0:10/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 0:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:10/0/physics_layer_0/angular_velocity = 0.0
 1:10/0 = 0
+1:10/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 1:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:10/0/physics_layer_0/angular_velocity = 0.0
 2:10/0 = 0
+2:10/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 2:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:10/0/physics_layer_0/angular_velocity = 0.0
 3:10/0 = 0
+3:10/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 3:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:10/0/physics_layer_0/angular_velocity = 0.0
 4:10/0 = 0
+4:10/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 4:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:10/0/physics_layer_0/angular_velocity = 0.0
 6:10/0 = 0
+6:10/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 6:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:10/0/physics_layer_0/angular_velocity = 0.0
 0:11/0 = 0
+0:11/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 0:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:11/0/physics_layer_0/angular_velocity = 0.0
 1:11/0 = 0
+1:11/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 1:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:11/0/physics_layer_0/angular_velocity = 0.0
 2:11/0 = 0
+2:11/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 2:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:11/0/physics_layer_0/angular_velocity = 0.0
 3:11/0 = 0
+3:11/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 3:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:11/0/physics_layer_0/angular_velocity = 0.0
 4:11/0 = 0
+4:11/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 4:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:11/0/physics_layer_0/angular_velocity = 0.0
 5:11/0 = 0
+5:11/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 5:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:11/0/physics_layer_0/angular_velocity = 0.0
 0:12/0 = 0
+0:12/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 0:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:12/0/physics_layer_0/angular_velocity = 0.0
 1:12/0 = 0
+1:12/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 1:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:12/0/physics_layer_0/angular_velocity = 0.0
 2:12/0 = 0
+2:12/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 2:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:12/0/physics_layer_0/angular_velocity = 0.0
 3:12/0 = 0
+3:12/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 3:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:12/0/physics_layer_0/angular_velocity = 0.0
 4:12/0 = 0
+4:12/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 4:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:12/0/physics_layer_0/angular_velocity = 0.0
 0:13/0 = 0
+0:13/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 0:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:13/0/physics_layer_0/angular_velocity = 0.0
 1:13/0 = 0
+1:13/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 1:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:13/0/physics_layer_0/angular_velocity = 0.0
 2:13/0 = 0
+2:13/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 2:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:13/0/physics_layer_0/angular_velocity = 0.0
 3:13/0 = 0
+3:13/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 3:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:13/0/physics_layer_0/angular_velocity = 0.0
 4:13/0 = 0
+4:13/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 4:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:13/0/physics_layer_0/angular_velocity = 0.0
 5:13/0 = 0
+5:13/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 5:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:13/0/physics_layer_0/angular_velocity = 0.0
 0:14/0 = 0
+0:14/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 0:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:14/0/physics_layer_0/angular_velocity = 0.0
 1:14/0 = 0
+1:14/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 1:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:14/0/physics_layer_0/angular_velocity = 0.0
 2:14/0 = 0
+2:14/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 2:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:14/0/physics_layer_0/angular_velocity = 0.0
 3:14/0 = 0
+3:14/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 3:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:14/0/physics_layer_0/angular_velocity = 0.0
 4:14/0 = 0
+4:14/0/modulate = Color(0.221574, 0.531031, 0.522277, 1)
 4:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:14/0/physics_layer_0/angular_velocity = 0.0
 0:15/0 = 0
@@ -405,10 +483,14 @@ texture = ExtResource("2_4tais")
 2:4/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_hb2vw"]
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_axry7")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_m837o"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4klqp"]
+polygon = PackedVector2Array(-16, -2, -14, -4, 14, -4, 15, -2, 15, 2, 14, 4, -14, 4, -16, 2)
 
 [sub_resource type="Animation" id="Animation_x2aya"]
 length = 0.001
@@ -448,6 +530,9 @@ _data = {
 "move": SubResource("Animation_ufxck")
 }
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jx38w"]
+polygon = PackedVector2Array(356, -17, 384, -35, 480, -35, 480, -20)
+
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -468,7 +553,7 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(51, 55)
+position = Vector2(51, 54)
 tile_set = SubResource("TileSet_hb2vw")
 format = 2
 layer_0/name = "Background"
@@ -485,6 +570,13 @@ zoom = Vector2(4, 4)
 limit_bottom = 150
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+scale = Vector2(1, 1)
+color = Color(0.0742193, 0.158684, 0.145744, 1)
+energy = 2.35
+shadow_enabled = true
+texture = ExtResource("5_n7uq8")
 
 [node name="Killzone" parent="." instance=ExtResource("5_js0nj")]
 position = Vector2(120, 155)
@@ -514,6 +606,9 @@ position = Vector2(395, 64)
 [node name="Platform" parent="Platforms" instance=ExtResource("1_gi18u")]
 position = Vector2(51, 42)
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Platforms/Platform"]
+occluder = SubResource("OccluderPolygon2D_4klqp")
+
 [node name="Platform2" parent="Platforms" instance=ExtResource("1_gi18u")]
 position = Vector2(370, 20)
 
@@ -522,6 +617,9 @@ libraries = {
 "": SubResource("AnimationLibrary_yiwmx")
 }
 autoplay = "move"
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Platforms/Platform2"]
+occluder = SubResource("OccluderPolygon2D_4klqp")
 
 [node name="Slime" parent="." instance=ExtResource("6_ooqg2")]
 position = Vector2(158, 12)
@@ -557,3 +655,17 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_emur6")
 theme_override_font_sizes/font_size = 8
 text = "Almost there..."
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(-2, -3)
+rotation = -0.76969
+shadow_enabled = true
+shadow_filter = 1
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.822184, 0.909211, 0.934888, 1)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
+position = Vector2(-307, 0)
+occluder = SubResource("OccluderPolygon2D_jx38w")
